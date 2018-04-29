@@ -1,0 +1,19 @@
+{# index page, providing a form to submit a city name #}
+{% extends "base.html" %}
+{% block title %}World Cities{% endblock %}
+{% block content %}
+<h1>Hello Cities of the World!</h1>
+<p>This app is named "{{ app["application_name"] }}". </p>
+<br>
+<p>
+ <!--<form action="/search" method="get">-->
+  <!--City: <input type="text" name="name" maxlength="200" width="60"> <input type="submit" value="Search">-->
+<!--</form>-->
+ <form action="submit" method="post" name="img_upload">
+  User Name: <input type="text" name="name" maxlength="200" width="60"><br><br>
+  Image bytearray: <input type="text" name="img" maxlength="200" width="60"><br><br>
+  Time: <input type="time" name="time" maxlength="2000" width="60"><br><br>
+  <input type="submit" value="Upload">
+</form>
+</p>
+{% endblock %}
